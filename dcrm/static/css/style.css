@@ -1,0 +1,46 @@
+@font-face {
+    font-family: dynapuff;
+    src: url("../fonts/dynapuff.ttf");
+}
+@font-face {
+    font-family: blackHanSans;
+    src: url("../fonts/BlackHanSans.ttf");
+}
+.navbar{
+    font-family: dynapuff;
+    border-radius: 20px;
+    background-color: #F7F9F9;
+    font-size: 25px;
+    width:90%;
+    margin-bottom: 50px;
+}
+
+.navbar img{
+    width:150px;
+    height: 120px;
+    object-fit:cover;
+    object-position: 0% -10%;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+.vl {
+    border-left: 3px solid black;
+    height: 50px;
+}
+
+.header{
+    background-size:cover;
+    background-repeat: no-repeat;
+   
+    
+}
+.headerbox{
+    background-color: #00A67677;
+    height: 500px;
+    padding-top: 50px;
+}
+body{
+    font-family: blackHanSans;
+}
