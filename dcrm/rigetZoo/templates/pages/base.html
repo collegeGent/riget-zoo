@@ -4,14 +4,16 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap5.css' %}">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
     <body>
       {% block content %}
+      <h1>Nothing here but us chickens!</h1>
       {% endblock %}
+      {% include "sections/footer.html"%}
         <script src="{% static 'js/bootstrap/jQuery.js' %}"></script>
-        <script src="{% static 'js/bootstrap/popper.js' %}"></script>
-        <script src="{% static 'js/bootstrap/bootstrap.js' %}"></script>
+        <script src="{% static 'js/bootstrap/popper5.js' %}"></script>
+        <script src="{% static 'js/bootstrap/bootstrap5.js' %}"></script>
     </body>
 </html>

@@ -1,12 +1,44 @@
 {% extends "pages/base.html" %}
 {% load static %}
-{% block content%}
-{% include "sections/header.html" %}
-<h1 class="text-center display-3 text-white">Your Adventure Starts Here!</h1>
-<div class="btnContainer">
-    <button type="button" class="btn rounded-pill bg-primary">Book <br> Tickets</button>
-    <button type="button" class="btn rounded-pill bg-primary">Become a<br> Member</button>
-</div>
-    </div>
-</div>
+{% block content %}
+        {% include "sections/header.html" with headStart=True headEnd=False %}
+            <h1 class="text-center display-3 text-white">Your Adventure Starts Here!</h1>
+            <div class="text-center mb-5 mt-5">
+                <button type="button" class="btn rounded-pill fs-2 w-25 me-5 text-light" style="background-color:#601700;">Book <br> Tickets</button>
+                <button type="button" class="btn rounded-pill fs-2 w-25 ms-5" style="background-color:#FFF831;">Become a<br> Member</button>
+            </div>
+        {% include "sections/header.html" with headStart=False headEnd=True %}
+        {% include "sections/mid-top.html" with midTopStart=True midTopEnd=False %}
+            <div id="carouselExampleFade" class="carousel slide carousel-fade w-75 my-5 mx-auto" data-bs-ride="carousel" data-bs-theme="dark" >
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'images/Image1.jpg'%}" class="d-block w-100 h-25" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'images/Image2.jpg'%}" class="d-block w-100 h-25" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'images/Image 3.png'%}" class="d-block w-100 h-25" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'images/Image4.png'%}" class="d-block w-100 h-25" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'images/Image5.png'%}" class="d-block w-100 h-25" alt="">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        {% include "sections/mid-top.html" with midTopStart=False midTopEnd=True %}
+        {% include "sections/mid-bottom.html" with midBottomStart=True midBottomEnd=False %}
+            <h1 class="text-center display-1 text-decoration-underline mt-5 mb-4">Welcome to Riget</h1>
+            <p class="text-center display-6 mb-5">Embark on an unforgettable adventure at Riget Adventures, where the wonders of the animal kingdom come to life. Immerse yourself in breathtaking habitats, witness exotic creatures up close, and discover the magic of nature. From playful primates to majestic predators, our zoo offers a unique experience for all ages. Join us on a journey of discovery and create lasting memories with your family and friends.</p>
+        {% include "sections/mid-bottom.html" with midBottomStart=False midBottomEnd=True %}
 {% endblock %}

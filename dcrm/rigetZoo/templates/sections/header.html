@@ -1,5 +1,13 @@
 {% load static %}
-<div class="header" style="background-image: url('{% static 'images/'%}{{ bgImage }}');">
-    <div class="headerbox">
+{% if headStart %}
+<div class="header pt-5" style="background-image: url('{% static 'images/'%}{{ bgImage }}');">
+    <div class="container headerbox" >
         {% include "sections/navbar.html" %} 
+{% endif %}
+{% if headEnd  %}
+    </div>
+</div>
+{% endif  %}
+
+
 

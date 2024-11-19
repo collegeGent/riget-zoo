@@ -1,0 +1,6 @@
+{% extends "example/superbase.html" %}
+{% block content %}
+    <h1>This is the parent</h1>
+    {% include "example/child.html" with block="child" %}
+    <h1>Parents come in 2</h1>
+{% endblock content %}
