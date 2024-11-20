@@ -1,0 +1,68 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% block content %}
+        {% include "sections/header.html" with headStart=True headEnd=False %}
+            <h1 class="text-center display-3 text-white">Educational Visits</h1>
+            <p class="text-center text-white fs-3 bg-dark bg-gradient" style="--bs-bg-opacity: .5;">
+                We offer a range of educational visits for schools and colleges. Please contact us for some more information. Small school? Book tickets here      
+            <p>
+            <div class="text-center mb-5 mt-5">
+                <button type="button" class="btn rounded-pill fs-2 w-25 mx-auto text-light" style="background-color:#601700;">Book <br> Tickets</button>
+            </div>
+        {% include "sections/header.html" with headStart=False headEnd=True %}
+        {% include "sections/mid-top.html" with midTopStart=True midTopEnd=False %}
+        <div class="card mb-3 mt-5">
+            <div class="row g-0 align-items-center bg-body-secondary">
+              <div class="col-md-4">
+                <img src="{% static "images/Image14.jpg" %}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <p class="card-text fs-4 text-center">At Riget Adventures, we prioritize the safety of our visitors and animals. Our dedicated staff maintains secure enclosures and follows strict safety protocols to ensure a safe and enjoyable experience for everyone. Please follow all posted guidelines and instructions to help us keep everyone safe.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3">
+            <div class="row g-0 align-items-center bg-body-secondary">
+              <div class="col-md-4">
+                <img src="{% static "images/Image2.jpg" %}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <p class="card-text fs-4 text-center">Riget Adventures isn't just a zoo; it's a cutting-edge educational experience. Our state-of-the-art technology brings the animal kingdom to life through immersive 3D experiences. Students can virtually interact with animals from around the world, learning about their behaviors, habitats, and conservation challenges. Our educational programs, led by expert zoologists, combine traditional learning with innovative technology to inspire the next generation of wildlife advocates.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-5">
+            <div class="row g-0 align-items-center bg-body-secondary">
+              <div class="col-md-4">
+                <img src="{% static "images/Image 3.png" %}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <p class="card-text fs-4 text-center">Immerse yourself in interactive exhibits, engaging educational programs, and cutting-edge technology. Our zoo offers a unique learning experience for students of all ages, combining traditional education with innovative technology.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% include "sections/mid-top.html" with midTopStart=False midTopEnd=True %}
+        {% include "sections/mid-bottom.html" with midBottomStart=True midBottomEnd=False %}
+        <div class="row w-75 mx-auto">
+            <div class="col">
+                <h1 class="display-6 text-decoration-underline mt-5 mb-4">Where to find us</h1>
+                <p class="mb-5">Conveniently Located, Riget Adventures is easily accessible, situated near major highways and public transportation. Enjoy the convenience of nearby amenities, including restaurants, hotels, and shopping centers. Make your visit to Riget Adventures a memorable experience.</p>
+                <p class="mb-5">
+                    Riget Adventures <br>
+                    123 Wildwood Lane Mystic Falls<br>
+                    S81 7HP <br>
+                    Worksop <br>
+                </p>
+            </div>
+            <div class="col">
+                <iframe class="my-5" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2834.6101643364177!2d-1.122285922576809!3d53.31436737018889!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879a14ea367b56b%3A0xb0c1590e7fd06f0a!2sNorth%20Notts%20College!5e0!3m2!1sen!2suk!4v1732105026317!5m2!1sen!2suk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        {% include "sections/mid-bottom.html" with midBottomStart=False midBottomEnd=True %}
+{% endblock %}

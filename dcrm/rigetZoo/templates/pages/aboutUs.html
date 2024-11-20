@@ -1,0 +1,80 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% block content %}
+        {% include "sections/header.html" with headStart=True headEnd=False %}
+            <h1 class="text-center display-3 text-white">About Us</h1>
+            <p class="text-center text-white fs-3 bg-dark bg-gradient mb-5" style="--bs-bg-opacity: .5;">
+                Riget Adventures is a non-profit organization dedicated to wildlife conservation. Your visit helps support vital conservation efforts, animal care, and educational programs. By purchasing tickets and making donations, you contribute to a brighter future for endangered species.
+            <p>
+        {% include "sections/header.html" with headStart=False headEnd=True %}
+        {% include "sections/mid-top.html" with midTopStart=True midTopEnd=False %}
+            <h1 class="display-5 text-center text-decoration-underline mt-5 mb-4">Preserving Wildlife, One Step at a Time</h1>
+            <p class="fs-5 w-75 mx-auto">
+                At Riget Adventures, we are committed to providing the highest quality care for our animals. Our dedicated team of zookeepers works tirelessly to ensure that each animal's physical and psychological needs are met. We strive to create environments that closely mimic their natural habitats, providing opportunities for foraging, social interaction, and natural behaviours.
+            </p>
+            <p class="fs-5 w-75 mx-auto">
+                By supporting Riget Adventures, you are directly contributing to vital conservation efforts. Your donations help fund:
+            </p>
+            <ul style="list-style-position: outside;" class="fs-5 w-75 mx-auto">
+                <li>
+                    Magnificent Mammals: Encounter majestic lions, playful primates, and gentle giants like elephants and giraffes.
+                </li>
+                <br>
+                <li>
+                    Feathered Friends: Marvel at the vibrant colors and intricate patterns of exotic birds.
+                </li>
+                <br>
+                <li>
+                    Slithering Sensations: Get up close to fascinating reptiles and amphibians.
+                </li>
+                <br>
+                <li>
+                    Aquatic Wonders: Explore underwater worlds and observe the graceful movements of marine life.
+                </li>
+            </ul>
+            <p class="fs-5 w-75 mx-auto">
+                Every donation, no matter how small, makes a significant impact. By choosing to visit Riget Adventures, you are not only experiencing the wonders of the animal kingdom but also supporting a cause that is essential to the survival of countless species.
+            </p>
+            <div class="row my-5 justify-content-center mx-auto" style="height:300px; width:90%;">
+                <div class="col-4 h-100">
+                    <img class="w-100 h-100 rounded-5" src="{% static "images/Image13.jpg" %}"  alt="">
+                </div>
+                <div class="col-8 h-100">
+                    <img class="w-100 h-100 rounded-5" src="{% static "images/scientist.jpg" %}"  alt="">
+                </div>
+            </div>
+        {% include "sections/mid-top.html" with midTopStart=False midTopEnd=True %}
+        {% include "sections/mid-bottom.html" with midBottomStart=True midBottomEnd=False %}
+        <h1 class="display-1 text-decoration-underline mt-5 mb-4">Loyalty Scheme</h1>
+        <p>Join the Riget Adventures Loyalty Program and unlock a world of exclusive benefits. Earn points with every visit, ticket purchase, or donation, and redeem them for exciting rewards such as free entry, exclusive behind-the-scenes tours, merchandise discounts, and priority access. Sign up today and start earning rewards for your wildlife adventures!</p>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        {% include "sections/mid-bottom.html" with midBottomStart=False midBottomEnd=True %}
+{% endblock %}

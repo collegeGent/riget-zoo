@@ -1,0 +1,77 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% block content %}
+        {% include "sections/header.html" with headStart=True headEnd=False %}
+            <h1 class="text-center display-3 text-white">What have we got here?</h1>
+            <p class="text-center text-white fs-3 bg-dark bg-gradient" style="--bs-bg-opacity: .5;">
+                Come and see what we have to offer for your world of adventure at Riget Zoo. Book tickets online for a 20% discounted price! 
+            <p>
+            <div class="text-center mb-5 mt-5">
+                <button type="button" class="btn rounded-pill fs-2 w-25 mx-auto text-light" style="background-color:#601700;">Book <br> Tickets</button>
+            </div>
+        {% include "sections/header.html" with headStart=False headEnd=True %}
+        {% include "sections/mid-top.html" with midTopStart=True midTopEnd=False %}
+        <div class="card my-5 bg-body-secondary px-4 rounded-5">
+            <div class="row g-0 align-items-center " style="--bs-border-opacity: 0;">
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h1 class="display-3 text-decoration-underline mt-2 mb-4">Experience Nature</h1>
+                  <p class="card-text">Riget Adventures is home to a stunning array of animals from around the globe. From the majestic African savannah to the mysterious Amazon rainforest, you'll discover a diverse range of species, including:</p>
+                  <ul style="list-style-position: outside;">
+                    <li>
+                        Magnificent Mammals: Encounter majestic lions, playful primates, and gentle giants like elephants and giraffes.
+                    </li>
+                    <li>
+                        Feathered Friends: Marvel at the vibrant colors and intricate patterns of exotic birds.
+                    </li>
+                    <li>
+                        Slithering Sensations: Get up close to fascinating reptiles and amphibians.
+                    </li>
+                    <li>
+                        Aquatic Wonders: Explore underwater worlds and observe the graceful movements of marine life.
+                    </li>
+                  </ul>
+                  <button type="button" class="btn rounded-pill fs-2 mx-auto text-light" style="background-color:#601700;">Find out more</button>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <img  src="{% static "images/Lion Images.jpg" %}" class="img-fluid rounded-5" alt="...">
+              </div>
+            </div>
+          </div>
+        {% include "sections/mid-top.html" with midTopStart=False midTopEnd=True %}
+        {% include "sections/mid-bottom.html" with midBottomStart=True midBottomEnd=False %}
+        <div class="row my-5">
+            <div class="col">
+                <div class="card mx-auto" style="width: 100%; min-height:700px;">
+                    <img src="{% static "images/Image10.jpg" %}" class="card-img-top" alt="">
+                    <div class="card-body bg-body-secondary">
+                        <h3 class="card-title text-decoration-underline">Seeing is believing</h3>
+                        <p class="card-text">Come visit our larger than life open space park. Come and enjoy the green and clean atmosphere</p>
+                        <button type="button" class="position-absolute bottom-0 btn rounded-pill mx-auto text-light mb-2" style="background-color:#601700;">Find out more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mx-auto" style="width: 100%; min-height:700px;">
+                    <img src="{% static "images/FamilyMembers.jpg" %}" class="card-img-top" alt="">
+                    <div class="card-body bg-body-secondary">
+                        <h3 class="card-title text-decoration-underline">Become a Member</h3>
+                        <p class="card-text">Regular visitor? Why not become a member of the Riget Zoo Family! Sign up free and redeem loyalty points for your next visits!</p>
+                        <button type="button" class="position-absolute bottom-0 btn rounded-pill mx-auto text-light mb-2" style="background-color:#601700;">Find out more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mx-auto" style="width: 100%; min-height:700px;">
+                    <img src="{% static "images/schoolVisit.jpg" %}" class="card-img-top" alt="">
+                    <div class="card-body bg-body-secondary ">
+                        <h3 class="card-title text-decoration-underline">Educational Visits</h3>
+                        <p class="card-text">We offer a wide range of educational visits here at Riget Zoo. Click below to see what we can offer your school!</p>
+                        <button type="button" class="position-absolute bottom-0 btn rounded-pill mx-auto text-light mb-2" style="background-color:#601700;">Find out more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include "sections/mid-bottom.html" with midBottomStart=False midBottomEnd=True %}
+{% endblock %}
