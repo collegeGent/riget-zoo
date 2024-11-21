@@ -1,7 +1,7 @@
 {% load static %}
 
 <nav class="navbar navbar-expand-xl navbar-light mx-auto">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="{% url "" %}">
         <img src="{% static 'images/logoNLT.gif' %}" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,16 +15,16 @@
                 Visit
             </a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Visit Us</a>
+                <a class="dropdown-item" href="{% url "visitUs" %}">Visit Us</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Educational Visits</a>
+                <a class="dropdown-item" href="{% url "visitEdu" %}">Educational Visits</a>
             </div>
         </li>
         <li class="nav-item ml-3">
-          <a class="nav-link" href="#">What's Here</a>
+          <a class="nav-link" href="{% url "whatsHere" %}">What's Here</a>
         </li>
         <li class="nav-item ml-3">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="{% url "aboutUs" %}">About Us</a>
           </li>
         <li class="nav-item dropdown ml-3">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
