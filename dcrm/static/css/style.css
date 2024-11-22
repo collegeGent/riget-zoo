@@ -66,5 +66,8 @@ body{
 
 form{
     background-color:#601700;
+    color:#ffffff !important;
 }
-
+form div{
+    color:#ffffff !important;
+}

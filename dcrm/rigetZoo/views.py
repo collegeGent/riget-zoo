@@ -4,7 +4,7 @@ from django.contrib.auth.models import auth
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
-from .forms import LoginForm
+from .forms import LoginForm, CreateUserForm
 
 # Create your views here.
 def home(request):
@@ -71,6 +71,19 @@ def login(request):
 #     if request.method == "POST":
 #         if form in method.POST:
 
+
+def register(request):
+    form = CreateUserForm()
+
+    if request.method == 'POST':
+        form = CreateUserForm(request, data=request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "You have registered your account successfully!")
+            return redirect('login')
+
+    context = {'register_form':form}
+    return render(request, 'pages/register.html',context=context)
 
 def example(request):
         return render(request, "example/parent.html")

@@ -8,7 +8,16 @@ class CreateUserForm(UserCreationForm):
 
     class Meta:
         model = ZooUser
-        fields = ['username' , 'password1', 'password2']
+        fields = ['first_name', 'last_name', 'email','houseNum','street','postCode','phoneNum','username','password1','password2']
+        labels = {
+            'first_name': "First Name",
+            'last_name':"Last Name",
+            'email':'Email',
+            'houseNum': 'House Number or Name',
+            'street':"Street",
+            'postCode':'Post Code',
+            'phoneNum': 'Phone Number',
+        }
 
 class LoginForm(AuthenticationForm):
     username = forms.CharField(widget=TextInput())
