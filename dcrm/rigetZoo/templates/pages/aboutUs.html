@@ -45,36 +45,54 @@
             </div>
         {% include "sections/mid-top.html" with midTopStart=False midTopEnd=True %}
         {% include "sections/mid-bottom.html" with midBottomStart=True midBottomEnd=False %}
+        <div class="w-75 mx-auto">
         <h1 class="display-1 text-decoration-underline mt-5 mb-4">Loyalty Scheme</h1>
         <p>Join the Riget Adventures Loyalty Program and unlock a world of exclusive benefits. Earn points with every visit, ticket purchase, or donation, and redeem them for exciting rewards such as free entry, exclusive behind-the-scenes tours, merchandise discounts, and priority access. Sign up today and start earning rewards for your wildlife adventures!</p>
-        <table class="table">
+        <table class="table-secondary table table-hover text-center">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Reward</th>
+                <th scope="col">Points Required</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>Animal Encounter Experience</td>
+                <td>1500</td>
               </tr>
               <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
+                <td>Exclusive behind the scenes tour</td>
+                <td>1000</td>
               </tr>
               <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
+                <td>Free Food Voucher</td>
+                <td>750</td>
+              </tr>
+              <tr>
+                <td>Free Entry Ticket</td>
+                <td>500</td>
+              </tr>
+              <tr>
+                <td>10% off hotel bookings</td>
+                <td>250</td>
+              </tr>
+              <tr>
+                <td>Exclusive Book</td>
+                <td>150</td>
               </tr>
             </tbody>
           </table>
+          <p>Points are earned through buying tickets online for either our experiences or our hotel. 
+            <br>
+            <br>
+            <br>
+            Buying zoo tickets will get you <br>
+            1 Adult 100 points <br>
+            1 Child 50 points <br>
+            <br>
+            Buying Hotel tickets will get you: <br>
+            1 Adult 200 points <br>
+            1 Child 100 points</p>
+          </div>
         {% include "sections/mid-bottom.html" with midBottomStart=False midBottomEnd=True %}
 {% endblock %}

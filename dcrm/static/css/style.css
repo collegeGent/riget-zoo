@@ -63,3 +63,8 @@ body{
     height: 450px;
     object-fit: cover;
 }
+
+form{
+    background-color:#601700;
+}
+

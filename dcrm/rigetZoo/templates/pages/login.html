@@ -1,0 +1,15 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+        {% include "sections/header.html" with headStart=True headEnd=True %}
+        {% include "sections/mid-bottom.html" with midBottomStart=True midBottomEnd=False %}
+            <form method="POST" autocomplete="off" class="text-light m-5 p-5 rounded-4">
+                <h1 class="text-decoration-underline">Login</h1>
+                {% csrf_token %}
+                {{login_form|crispy}}
+                <br>
+                <button type="submit" class="btn rounded-pill fs-2 w-100 text-center" style="background-color:#FFF831;">Login</button>
+            </form>
+        {% include "sections/mid-bottom.html" with midBottomStart=False midBottomEnd=True %}
+{% endblock %}

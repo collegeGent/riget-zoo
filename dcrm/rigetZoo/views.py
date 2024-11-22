@@ -1,4 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate 
+from django.contrib.auth.models import auth
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+
+from .forms import LoginForm
 
 # Create your views here.
 def home(request):
@@ -26,6 +32,45 @@ def aboutUs(request):
     context={'bgImage': 'teamphoto.jpg',}
     return render(request, webpage, context=context)
 
-def example(request):
+def login(request):
+    return redirect()
 
+#logout user
+def user_logout(request):
+    auth.logout(request)
+    messages.success(request, "You have logged out successfully!")
+    return redirect("login")
+
+def login(request):
+    form = LoginForm()
+
+    if request.method == 'POST':
+        form = LoginForm(request, data=request.POST)
+        
+        if form.is_valid():
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            user = authenticate(request, username=username, password=password)
+
+            if user is not None:
+                auth.login(request, user)
+                messages.success(request, "You have logged in successfully!")
+                return redirect('')
+
+    context = {'login_form':form}
+    return render(request, 'pages/login.html',context=context)
+
+
+# def payScreen(request):
+#     booking = Hotel_Booking.objects.latest("customer_id")
+#     context = {'paymentForm': form,
+#                 'booking':booking}
+
+
+#     form = booking_form()
+#     if request.method == "POST":
+#         if form in method.POST:
+
+
+def example(request):
         return render(request, "example/parent.html")

@@ -38,13 +38,19 @@
         </li>
     </ul>
         <div class="navbar-nav ms-auto">
-        <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
-        </li>
-        <div class="vr text-dark opacity-100" style="width:5px;"></div>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Register</a>
-        </li>
+          {% if  user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url "sign-out" %}">Sign Out</a>
+            </li>
+          {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url "login" %}">Login</a>
+            </li>
+            <div class="vr text-dark opacity-100" style="width:5px;"></div>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Register</a>
+            </li>
+          {% endif %}
       </div>
     </div>
   </nav>
