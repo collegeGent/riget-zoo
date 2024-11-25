@@ -2,7 +2,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 from django import forms
 from django.forms.widgets import PasswordInput, TextInput
-from .models import ZooUser
+from .models import ZooUser, zooBooking, hotelBooking
 
 class CreateUserForm(UserCreationForm):
 
@@ -22,3 +22,20 @@ class CreateUserForm(UserCreationForm):
 class LoginForm(AuthenticationForm):
     username = forms.CharField(widget=TextInput())
     password = forms.CharField(widget=PasswordInput())
+
+class bookZooForm(forms.ModelForm):
+
+    class Meta:
+        model = zooBooking
+        fields = ["dateStart","dateEnd","adult","child","price"]
+        labels={
+            "dateStart": "Enter your starting date",
+            "dateEnd": "Enter when you want to finish",
+            "adult":"How many adults?",
+            "child":"How many children?"
+        }
+        widgets = {
+            'dateStart':forms.DateInput(attrs={'type':'date'}),
+            'dateEnd':forms.DateInput(attrs={'type':'date'}),
+            'price':forms.HiddenInput(),
+        }

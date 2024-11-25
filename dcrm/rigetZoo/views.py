@@ -4,7 +4,7 @@ from django.contrib.auth.models import auth
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
-from .forms import LoginForm, CreateUserForm
+from .forms import LoginForm, CreateUserForm, bookZooForm
 
 # Create your views here.
 def home(request):
@@ -76,7 +76,7 @@ def register(request):
     form = CreateUserForm()
 
     if request.method == 'POST':
-        form = CreateUserForm(request, data=request.POST)
+        form = CreateUserForm(data=request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, "You have registered your account successfully!")
@@ -84,6 +84,11 @@ def register(request):
 
     context = {'register_form':form}
     return render(request, 'pages/register.html',context=context)
+
+def zooBook(request):
+    form = bookZooForm()
+    context = {"zooBookForm":form}
+    return render(request, 'pages/bookZoo.html',context=context)
 
 def example(request):
         return render(request, "example/parent.html")
