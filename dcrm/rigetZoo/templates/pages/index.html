@@ -4,8 +4,8 @@
         {% include "sections/header.html" with headStart=True headEnd=False %}
             <h1 class="text-center display-3 text-white">Your Adventure Starts Here!</h1>
             <div class="text-center mb-5 mt-5">
-                <button type="button" class="btn rounded-pill fs-2 w-25 me-5 text-light" style="background-color:#601700;">Book <br> Tickets</button>
-                <button type="button" class="btn rounded-pill fs-2 w-25 ms-5" style="background-color:#FFF831;">Become a<br> Member</button>
+               <a href="{% url 'zooBook' %}"> <button type="button" class="btn rounded-pill fs-2 w-25 me-5 text-light" style="background-color:#601700;" onclick="">Book <br> Tickets</button></a>
+               <a href="{% url 'register' %}"><button type="button" class="btn rounded-pill fs-2 w-25 ms-5 text-dark" style="background-color:#FFF831;">Become a<br> Member</button></a>
             </div>
         {% include "sections/header.html" with headStart=False headEnd=True %}
         {% include "sections/mid-top.html" with midTopStart=True midTopEnd=False %}

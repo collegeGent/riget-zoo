@@ -14,9 +14,9 @@ class zooBooking(models.Model):
     custID = models.ForeignKey("rigetZoo.ZooUser", on_delete=models.CASCADE)
     dateStart = models.DateField()
     dateEnd = models.DateField()
-    adult = models.IntegerField(max_length=2, default=0)
-    child = models.IntegerField(max_length=2, default=0)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
+    adult = models.IntegerField(default=0)
+    child = models.IntegerField(default=0)
+    price = models.DecimalField(max_digits=6, decimal_places=2,default=0)
     creation_data = models.DateTimeField(auto_now_add=True)
 
 class hotelBooking(models.Model):
@@ -24,7 +24,7 @@ class hotelBooking(models.Model):
     custID = models.ForeignKey("rigetZoo.ZooUser", on_delete=models.CASCADE)
     dateStart = models.DateField()
     dateEnd = models.DateField()
-    adult = models.IntegerField(max_length=2, default=0)
-    child = models.IntegerField(max_length=2, default=0)
+    adult = models.IntegerField(default=0)
+    child = models.IntegerField(default=0)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     creation_data = models.DateTimeField(auto_now_add=True)
