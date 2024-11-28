@@ -9,8 +9,10 @@
                 {% csrf_token %}
                 {{zooBookForm|crispy}}
                 <br>
+                <h2>Ticket Price: £<p class="w-25" style="display:inline-block;" id="output">0</p></h2>
+                <br>
                 <button type="submit" class="btn rounded-pill fs-2 w-100 text-center" style="background-color:#FFF831;">Book Now</button>
             </form>
-        <script src='{% static "functions/booking.js" %}'></script>
+        <script src='{% static "js/functions/booking.js" %}'></script>
         {% include "sections/mid-bottom.html" with midBottomStart=False midBottomEnd=True %}
 {% endblock %}
