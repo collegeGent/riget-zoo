@@ -3,6 +3,7 @@ function update_cost(){
     leave = document.getElementById("id_dateStart").value
     arrive = document.getElementById("id_dateEnd").value
     output = document.getElementById("output")
+    error = document.getElementById("error")
     currentDate = new Date()
     //convert the data into dates and extract the difference in days
     leave = new Date(leave)
@@ -12,13 +13,21 @@ function update_cost(){
     days = Math.round(diff/(1000*60*60*24))
 
     //if correct times are chosen then calculate
-    if(days>0 && currentDate<arrive)
+    if(days>0 && adult>0 && child >0)
     {
-     output.innerHTML = (days*adult.value*50)+(days*child.value*50) 
+        if(currentDate<arrive)   
+        {
+            output.innerHTML = (days*adult.value*50)+(days*child.value*50) 
+            error.innerHTML = "";
+        }
+        else
+        {
+            error.innerHTML = "Please choose a starting date after the leaving date";
+        }
     }
-    else
+    if(adult<0 || child<0)
     {
-        console.log("Bad")
+        error.innerHTML = "Please put in positive numbers for children or adults";
     }
 }
 

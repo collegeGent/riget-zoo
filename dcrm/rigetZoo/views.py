@@ -80,8 +80,22 @@ def register(request):
         form = CreateUserForm(data=request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, "You have registered your account successfully!")
-            return redirect('login')
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            user = authenticate(request, username=username, password=password)
+
+            if user is not None:
+                auth.login(request, user)
+                messages.success(request, "You have logged in successfully!")
+                return redirect('')
+            else:
+                context = {'register_form':form}
+                messages.success(request, "You have logged in successfully!")
+
+                return render(request, 'pages/register.html',context=context)
+            
+          #  messages.success(request, "You have registered your account successfully!")
+          #  return redirect('login')
 
     context = {'register_form':form}
     return render(request, 'pages/register.html',context=context)
